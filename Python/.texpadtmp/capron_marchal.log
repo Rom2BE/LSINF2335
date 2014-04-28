@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.27)  28 APR 2014 23:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.27)  28 APR 2014 23:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -745,18 +745,18 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--9
+Underfull \hbox (badness 10000) in paragraph at lines 2--11
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 10.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 12.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (./example.py) (./example_run.sh) (./example_output.sh)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 20.
+(Font)              <9> on input line 22.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 20.
+(Font)              <5> on input line 22.
  [2
 
 ]) [3]
@@ -811,7 +811,7 @@ Here is how much of TeX's memory you used:
  957 hyphenation exceptions out of 8191
  65i,8n,96p,464b,1251s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "/Users/romain/Dropbox/Master/Q2/SINF2335 - Programming paradigms/Homeworks/LSINF2335/Python/.texpadtmp/capron_marchal.pdf" (7 pages, 572009 bytes).
+Output written on "/Users/romain/Dropbox/Master/Q2/SINF2335 - Programming paradigms/Homeworks/LSINF2335/Python/.texpadtmp/capron_marchal.pdf" (7 pages, 572169 bytes).
 PDF statistics:
  147 PDF objects out of 1000 (max. 8388607)
  124 compressed objects within 2 object streams
