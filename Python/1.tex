@@ -1,0 +1,25 @@
+\section{Write a Quine}
+Write a quine in a programming language of your choice.
+Can you write one that makes use of reflection ?\\
+
+To write a quine that makes use of reflection, we will divide our program in two parts :
+\begin{enumerate}
+    \item a string definition
+    \item the program core
+\end{enumerate}
+The string contains the code of the program core and the program core will print twice this string. Once to print the string, and again to print the program core. The output of this program must its source code.
+
+
+\subsection{Python}
+This is the quine I wrote :
+\lstinputlisting[language=C]{quine.py}
+
+To explain it, I modified the \emph{\_} symbols by variables \emph{a}, \emph{b}, \emph{c} and \emph{d} and printed the output. This allows to understand directly that it has the same principle as a Matryoshka doll. The main doll is the source code that can be divided in two parts. In the program core and we can find inside (by printing) a smaller doll ; the string. And there is again a fourth doll in this string. The output of the program is a doll that has the same appearance than the original doll.
+\lstinputlisting[language=C]{quine_explained.py}
+
+It is reflective because :
+\begin{enumerate}
+    \item the program is divided in two parts; string \& core
+    \item the core will print the string.
+    \item the string is also divided in two parts; string \& core and printed, it will produce a result that equals the source code. It is just like the program was able to print itself. 
+\end{enumerate}

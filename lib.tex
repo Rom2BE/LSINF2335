@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{article}
+
+% French
+\usepackage[utf8x]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{url}
+
+% Math symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{subfigure} %Allows to have several figures on the same line.
+\usepackage{listings} % environnement verbatim amÃ©liorÃ©e
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{tkz-graph}
+\usepackage{tikz}
+\usetikzlibrary{arrows,matrix,decorations.pathreplacing,positioning,chains,fit,shapes,calc} %Voir 1.3.8
+\usepackage{hyperref} %Allows to make references (\ref{}), pdf links are now clickable.
+\hypersetup{
+     colorlinks   = true,
+     citecolor    = gray
+}
+
+% Theorem and definitions
+\theoremstyle{definition}
+\newtheorem{mydef}{Définition}[subsection]
+\newtheorem{mynota}[mydef]{Notation}
+\newtheorem{myprop}[mydef]{Propriétés}
+\newtheorem{myrem}[mydef]{Remarque}
+\newtheorem{myform}[mydef]{Formules}
+\newtheorem{mycorr}[mydef]{Corrolaire}
+\newtheorem{mytheo}[mydef]{Théorème}
+\newtheorem{mylem}[mydef]{Lemme}
+\newtheorem{myexem}[mydef]{Exemple}
+\newtheorem{myalgo}[mydef]{Algorithme}
+
+\lstset{
+	basicstyle=\ttfamily,
+	keywordstyle=\bf\color{blue},
+	commentstyle=\color{red},
+	stringstyle=\color{magenta},
+	%numerotation
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	stepnumber=1,
+	numbersep=5pt,
+	tabsize=5, % nombre d'espaces d'indentation
+	%cadre
+	frame=TBlr,
+	backgroundcolor=\color{azure},
+	rulecolor=\color{blue}	
+} 
+
+\lstset{
+    language=C,
+    frame=single,
+    numbers=left,
+    numberstyle=\footnotesize,
+    tabsize=2,
+    keepspaces=true,
+    columns=fullflexible,
+    basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue},
+    breaklines=true,
+    breakatwhitespace=false
+}
+
+\lstset{%
+    language=bash,
+    columns=fullflexible,
+    aboveskip=5pt,
+    belowskip=10pt,
+    basicstyle=\small\ttfamily,
+    numbers=left,
+    numberstyle=\tiny\color{black!85},
+    stepnumber=1, 
+    numbersep=13pt,
+    backgroundcolor=\color{black!5},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    xleftmargin=20pt,
+    xrightmargin=10pt,
+    framesep=5pt,
+    framerule=3pt,
+    frame=leftline,
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=true,
+}

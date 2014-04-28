@@ -1,0 +1,2 @@
+\contentsline {section}{\numberline {1}Write a Quine}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Python}{2}{subsection.1.1}
