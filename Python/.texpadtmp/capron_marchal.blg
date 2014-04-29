@@ -5,7 +5,7 @@ The style file: unsrt.bst
 Database file #1: ../biblio.bib
 You've used 5 entries,
             1791 wiz_defined-function locations,
-            463 strings with 4027 characters,
+            463 strings with 4026 characters,
 and the built_in function-call counts, 591 in all, are:
 = -- 46
 > -- 11
