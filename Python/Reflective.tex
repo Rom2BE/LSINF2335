@@ -30,6 +30,12 @@ It is reflective because :
 
 \subsection{Applications of reflection}
 •	What are the typical applications that reflection could be used for in this language?\\
+
+\emph{"Reflection of a programming language is the ability to examine, modify and maintain its inner structure by the programming language itself at runtime.\\
+For example, if I write a class and I want to enumerate all the methods and print them to a file, I will need to know the exact set of methods associated with this class. Not that this structure is associated with the type, but not the instance.\\ For the association with type, I mean the structure is defined by type and is already decided before the program runs. A live example can be C++. When you write a class in C++, you know all the details of this C++ class. However, when the program runs, the program itself is not aware of the structure of the class because it is lack of the ability the examine its inner structure at runtime.\\
+Of course, you can say you don’t need to examine its structure at runtime because you already knew it when writing this class. But how you can modify the structure remains unsolved.\\
+For example, if you want to call method A(), and then call it again except that we expect a different behaviour at your second calling to that method. How can C++ achieve this? It can’t. But with Python, you can do this easily."} \cite{assembleforce}
+
 •	Can you give a working code example of such a typical problem that requires a reflective solution?\\
 \lstinputlisting[language=Python]{code/demo/Reflect.py}
 
