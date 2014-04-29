@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{martelli2006python}
+Alex Martelli.
+\newblock {\em Python in a Nutshell}.
+\newblock O'Reilly Media, Inc., 2006.
+
+\bibitem{functional_doc}
+A.~M. Kuchling.
+\newblock {Functional Programming HOWTO - Python v2.7.6 documentation}.
+\newblock \url{https://docs.python.org/2.7/howto/functional.html}.
+
+\bibitem{devtome}
+Python.
+\newblock \url{http://www.devtome.com/doku.php?id=python}.
+
+\bibitem{mihai}
+{Python and Meta-Programming | mihai.ibanescu.net}.
+\newblock \url{http://mihai.ibanescu.net/python-and-meta-programming)}.
+
+\bibitem{python_applications}
+{Applications for Python | Python.org}.
+\newblock \url{https://www.python.org/about/apps/)}.
+
+\end{thebibliography}
