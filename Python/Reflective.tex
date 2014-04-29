@@ -46,7 +46,15 @@ This is the main.py file that will apply reflection on the class \emph{reflect} 
 
 This is the output printed by main.py :
 \lstinputlisting[language=Bash]{code/demo/output.sh}
-Note that each line of this file corresponds to the red comment number in main.py.\\
+Note that each line of this last file corresponds to the red comment number (\textcolor{red}{\#X}) in main.py.\\ 
+In the first print (\textcolor{red}{\#1}), we use .\_\_class\_\_ that refers to the class to which a class instance belongs. In this case the program asks to the variable ref that is an instance of reflect (in the file Reflect.py) to print its own class.\\
+In the second print (\textcolor{red}{\#2}), we use .\_\_dict\_\_ that is a descriptor object that returns the internal dictionary of attributes for a specific instance. In this case the program asks to the variable ref that is an instance of reflect (in the file Reflect.py) to print its internal dictionary of attributes.\\
+In the third print (\textcolor{red}{\#3}), .\_\_doc\_\_ is the string of the class documentation. 
+In the fourth print (\textcolor{red}{\#4}), .\_\_sizeof\_\_ returns the size of an object in bytes.
+
+In the fifth print (\textcolor{red}{\#5}), we use .\_\_getattribute\_\_('name') 
+
+
 
 •	Does there exist a “killer-app” for this language that has been implemented with reflection?\\
 
