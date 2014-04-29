@@ -1,49 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: capron_marchal.aux
-A level-1 auxiliary file: 1.aux
-I found no \citation commands---while reading file capron_marchal.aux
-I found no \bibdata command---while reading file capron_marchal.aux
-I found no \bibstyle command---while reading file capron_marchal.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            84 strings with 507 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
+The style file: unsrt.bst
+Database file #1: ../biblio.bib
+You've used 5 entries,
+            1791 wiz_defined-function locations,
+            463 strings with 4027 characters,
+and the built_in function-call counts, 591 in all, are:
+= -- 46
+> -- 11
 < -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 7
+- -- 2
+* -- 5
+:= -- 78
+add.period$ -- 12
+call.type$ -- 5
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+cite$ -- 5
+duplicate$ -- 30
+empty$ -- 92
+format.name$ -- 2
+if$ -- 147
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
+int.to.str$ -- 5
+missing$ -- 2
+newline$ -- 25
+num.names$ -- 2
+pop$ -- 30
+preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 0
+skip$ -- 25
 stack$ -- 0
 substring$ -- 0
-swap$ -- 0
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 3 error messages)
+while$ -- 2
+width$ -- 6
+write$ -- 42
