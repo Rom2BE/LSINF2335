@@ -1,2 +1,18 @@
 http://see.stanford.edu/see/lecturelist.aspx?coll=2d712634-2bf1-4b55-9a3a-ca9d470755ee
 http://programmers.stackexchange.com/questions/127669/what-are-some-characteristics-of-python-that-makes-it-unique-as-its-own-language
+
+Réflection
+----------
+http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9504
+http://www.rafekettler.com/magicmethods.html#reflection
+http://www.assembleforce.com/2012-08/reflection-in-python.h
+
+
+Introspection
+-------------
+http://www.diveintopython.net/power_of_introspection/
+http://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/index.php
+http://programmingexamples.wikidot.com/python-introspection
+
+
+Comparaison entre Python et Java : http://brizzled.clapper.org/blog/2008/07/28/why-is-python-more-fun-than-java/
