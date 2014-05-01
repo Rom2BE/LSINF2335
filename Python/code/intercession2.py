@@ -1,0 +1,3 @@
+>>> def hello2(self):
+...     print "Hello Sir."
+... 

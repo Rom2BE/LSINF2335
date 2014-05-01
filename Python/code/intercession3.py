@@ -1,0 +1,1 @@
+>>> A.hello = hello2

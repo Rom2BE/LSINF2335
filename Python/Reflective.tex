@@ -1,7 +1,36 @@
 \section{Reflection and meta-programming}
 \subsection{Reflective features}
 •	What language features for dealing with reflection and meta-programming does the chosen language provide?\\
+% Q2
 •	What kinds of reflection and meta-programming features does that language offer?\\
+We saw in the course that there are 2 parts of reflection: introspection which only looks at entities and intercession which can change the program behavior by manipulating the entities. % (part 2, slide 27)
+Python performs the two.
+\newline
+
+Here is an example of intercession:
+\lstinputlisting[language=Python]{code/intercession_resume.py}
+
+%Here is an example of intercession:
+%\lstinputlisting[language=Python]{code/intercession1.py}
+%
+%With the output:
+%\lstinputlisting[language=Python]{code/intercession1_output.py}
+%
+%Now, we define a new method:
+%\lstinputlisting[language=Python]{code/intercession2.py}
+%
+%We can do this:
+%\lstinputlisting[language=Python]{code/intercession2_output.py}
+%
+%We want to modify the class A:
+%\lstinputlisting[language=Python]{code/intercession3.py}
+%
+%Here is the final output:
+%\lstinputlisting[language=Python]{code/intercession3_output.py}
+
+There are 3 types of reflection: introspection (access but not modify), structural reflection and computational (behavioral) reflection.% (part 2, slide 29)
+
+% Q3
 •	What is the MOP (meta-object protocol) for that language?\\
 •	What are the limitations of the reflective features provided by this language?\\
 •	Illustrate your explanations with working code fragments.\\
