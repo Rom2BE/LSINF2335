@@ -1,8 +1,8 @@
 \section{Reflection and meta-programming}
 \subsection{Reflective features}
 •	What language features for dealing with reflection and meta-programming does the chosen language provide?\\
+
 % Q2
-•	What kinds of reflection and meta-programming features does that language offer?\\
 We saw in the course that there are 2 parts of reflection: introspection which only looks at entities and intercession which can change the program behavior by manipulating the entities. % (part 2, slide 27)
 Python performs the two.
 \newline
@@ -10,6 +10,7 @@ Python performs the two.
 Here is an example of intercession:
 \lstinputlisting[language=Python]{code/intercession_resume.py}
 
+% ----- Utile de décomposer pour la présentation :
 %Here is an example of intercession:
 %\lstinputlisting[language=Python]{code/intercession1.py}
 %
@@ -33,8 +34,11 @@ There are 3 types of reflection: introspection (access but not modify), structur
 % Q3
 •	What is the MOP (meta-object protocol) for that language?\\
 In Python, it is possible to change the class of an object at runtime \cite{dynamic_lang_study}.% (related to become of Smalltalk).
+
+% Q4
 •	What are the limitations of the reflective features provided by this language?\\
-•	Illustrate your explanations with working code fragments.\\
+
+% Q5: done within the other answers
 
 \subsubsection{Write a Quine}
 To write a quine that makes use of reflection, we will divide our program in two parts:
