@@ -1,24 +1,17 @@
 http://see.stanford.edu/see/lecturelist.aspx?coll=2d712634-2bf1-4b55-9a3a-ca9d470755ee
 http://programmers.stackexchange.com/questions/127669/what-are-some-characteristics-of-python-that-makes-it-unique-as-its-own-language
 
-Réflection
+Reflection & metaprogramming
 ----------
 http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9504
 http://www.rafekettler.com/magicmethods.html#reflection
 http://www.assembleforce.com/2012-08/reflection-in-python.h
-
-
-Introspection
--------------
+http://zetcode.com/lang/python/introspection/
 http://www.diveintopython.net/power_of_introspection/
-http://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/index.php
 http://programmingexamples.wikidot.com/python-introspection
-
-
-Metaprogramming
----------------
+https://docs.python.org/2/reference/datamodel.html#customizing-class-creation
+http://en.wikibooks.org/wiki/Python_Programming/Reflection
 http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Metaprogramming.html
-http://mihai.ibanescu.net/python-and-meta-programming
 https://ep2013.europython.eu/media/conference/slides/meta-programming-some-use-cases-for-everyday-programming.pdf
 
 MOP

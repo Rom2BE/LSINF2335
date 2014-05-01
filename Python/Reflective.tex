@@ -1,6 +1,12 @@
 \section{Reflection and meta-programming}
 \subsection{Reflective features}
-•	What language features for dealing with reflection and meta-programming does the chosen language provide?\\
+% Q1
+We can use reflection in Python with the following functions: type(), id(), isinstance(), callable(), dir(), getattr(), etc. \cite{python_doc_functions}.
+The \textit{inspect} module can also be used to get information about objects \cite{python_doc_inspect}. Another module is the \textit{sys} module which allows us to query about the environment \cite{zetcode_introspection}.
+The metaclass by default is the "type" object.
+
+Here are some examples of such functions on the integer 42:
+\lstinputlisting[language=Python]{code/dir.py}
 
 % Q2
 We saw in the course that there are 2 parts of reflection: introspection which only looks at entities and intercession which can change the program behavior by manipulating the entities. % (part 2, slide 27)
@@ -29,11 +35,12 @@ Here is an example of intercession:
 %Here is the final output:
 %\lstinputlisting[language=Python]{code/intercession3_output.py}
 
-There are 3 types of reflection: introspection (access but not modify), structural reflection and computational (behavioral) reflection.% (part 2, slide 29)
+We can also classify reflection according to what can be reflected: structural reflection and computational (behavioral) reflection. % (part 2, slide 29)
+Python does both. It has a feature to add fields and methods to objects and classes. It can also modify the behavior of a method \cite{mendez2011computational}.
 
 % Q3
-•	What is the MOP (meta-object protocol) for that language?\\
-In Python, it is possible to change the class of an object at runtime \cite{dynamic_lang_study}.% (related to become of Smalltalk).
+In Python, it is possible to change the class of an object at runtime \cite{dynamic_lang_study}. % (related to become of Smalltalk).
+Python MOP is about callables such as functions and instances with \_\_call\_\_ method \cite{Russel_MOP}.
 
 % Q4
 •	What are the limitations of the reflective features provided by this language?\\
