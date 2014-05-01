@@ -23,6 +23,7 @@ Comparaisons langages
 ---------------------
 http://www.cs.jhu.edu/~scott/pl/lectures/dynamic-lang-study.shtml
 http://hyperpolyglot.org/scripting2#reflection
+http://www.ianbicking.org/the-challenge-of-metaprogramming.html
 
 Python vs Ruby
 --------------
@@ -33,6 +34,7 @@ http://programmers.stackexchange.com/questions/46584/what-should-a-python-develo
 http://www.ianbicking.org/ruby-python-power.html#metaprogramming
 http://www.ianbicking.org/re-ruby-and-python-compared.html
 http://t-a-w.blogspot.be/2006/09/fight-to-death-between-ruby-and-python.html
+http://rapd.wordpress.com/2009/07/13/python-vs-ruby-slightly-more-in-depth/
 
 
 Python vs Smalltalk
@@ -46,3 +48,7 @@ http://www.smalltalk.org/articles/article_20100320_a3_Getting_The_Message.html
 Python vs Java
 --------------
 http://brizzled.clapper.org/blog/2008/07/28/why-is-python-more-fun-than-java/
+http://stackoverflow.com/questions/5256001/java-equivalent-to-python-dir
+http://blog.publicobject.com/2010/04/codegen-vs-reflection.html
+https://www.python.org/about/success/nexedi/
+http://ozone.wordpress.com/2006/02/20/metaprogramming-javas-downfall/
