@@ -2,12 +2,26 @@
 \subsection{Reflective features}
 \label{reflection}
 % Q1
-We can use reflection in Python with the following functions: type(), id(), isinstance(), callable(), dir(), getattr(), etc. \cite{python_doc_functions}.
+We can easily use reflection in Python with the following functions: type(), id(), isinstance(), callable(), dir(), getattr(), etc. \cite{python_doc_functions}.
 The \textit{inspect} module can also be used to get information about objects \cite{python_doc_inspect}. Another module is the \textit{sys} module which allows us to query about the environment \cite{zetcode_introspection}.
 The metaclass by default is the "type" object.
 
 Here are some examples of such functions on the integer 42:
 \lstinputlisting[language=Python]{code/dir_cut.py}
+
+We can also create metaclasses: in Python, a metaclass can be a class, function or any object that supports calling an interface.
+
+The syntax to use metaclasses has been modified from Python 2 to Python 3 \cite{mikewatkins_metaclasses}. The syntax of the metaclass' creation is still the same:
+\lstinputlisting[language=Python]{code/metaclass.py}
+
+Here is how we use a metaclass in Python 2:
+\lstinputlisting[language=Python]{code/class_python2.py}
+
+Here is how we use a metaclass in Python 3:
+\lstinputlisting[language=Python]{code/class_python3.py}
+
+But if you want to have something which is compatible with both Python 2 and Python 3, you can use this:
+\lstinputlisting[language=Python]{code/class_python2and3.py}
 
 % Q2
 We saw in the course that there are 2 parts of reflection: introspection which only looks at entities and intercession which can change the program behavior by manipulating the entities. % (part 2, slide 27)
