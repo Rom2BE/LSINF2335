@@ -14,10 +14,12 @@ We can also create metaclasses: in Python, a metaclass can be a class, function 
 The syntax to use metaclasses has been modified from Python 2 to Python 3 \cite{mikewatkins_metaclasses}. The syntax of the metaclass' creation is still the same \cite{python_doc_datamodel}:
 \lstinputlisting[language=Python]{code/metaclass.py}
 
-Here is how we use a metaclass in Python 2:
+Here is how to use a metaclass in Python 2:
 \lstinputlisting[language=Python]{code/class_python2.py}
+If you run this code under Python 3, the hook is not recognized: Python will just add a \_\_metaclass\_\_ attribute to the class but it will do nothing \cite{artima_metaclasses_1of2}.
+\newline
 
-Here is how we use a metaclass in Python 3:
+Here is how to use a metaclass in Python 3:
 \lstinputlisting[language=Python]{code/class_python3.py}
 
 But if you want to have something which is compatible with both Python 2 and Python 3, you can use this:
