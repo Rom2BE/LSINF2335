@@ -22,9 +22,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%% Table Of Contents %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagenumbering{arabic}% Arabic page numbers (and reset to 1)
+
 \tableofcontents
 \newpage
+
+\pagenumbering{arabic}% Arabic page numbers (and reset to 1)
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\fancyfoot{}
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{\rightmark} % Clears the left side page header
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ \ #1}}
+
 
 \input{Chosen_Language}
 \input{Reflective}
