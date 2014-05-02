@@ -1,18 +1,13 @@
+'''Demonstration class for Python reflection'''
 class reflect(object):
-    '''Documentation of this demo class for Python reflection'''
+    '''Documentation of this reflect class'''
     def __init__(self):
-        '''
-            Constructor for reflect class
-        '''
-        self.name = "Romain Capron"
-        self.hobby = "Comic books"
+        '''Constructor'''
+        self.firstname = "Romain"
+        self.surname = "Capron"
     
     def message(self):
-        print "I am", self.name, "and I like", self.hobby
-    
-    @classmethod
-    def static_message(self):
-        print "I can be called without an instance."
+        print   "My firstname is", self.firstname,"and my surname is", self.surname
 
-def introduce():
-    print "I just introduce myself."
+def welcome():
+    print "Welcome my friend!"

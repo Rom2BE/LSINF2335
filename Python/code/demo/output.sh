@@ -1,11 +1,10 @@
 <class 'Reflect.reflect'>
-{'hobby': 'Comic books', 'name': 'Romain Capron'}
-Documentation of this demo class for Python reflection
+{'surname': 'Capron', 'firstname': 'Romain'}
+Documentation of this reflect class
 32
-Romain Capron
-Antoine Marchal
-I just introduce myself.
-I just introduce myself.
-I am Antoine Marchal and I like Internet
-I just introduce myself.
-I can be called without an instance.
+Romain
+Antoine
+Welcome my friend!
+Welcome my friend!
+My firstname is Antoine and my surname is Marchal
+Welcome my friend!

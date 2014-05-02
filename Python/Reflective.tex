@@ -82,20 +82,28 @@ A program made in a programming language that does not support reflection is not
 This is the Reflect.py file that will define the class \emph{reflect} :
 \lstinputlisting[language=Python]{code/demo/Reflect.py}
 
-This is the main.py file that will apply reflection on the class \emph{reflect} :
+This is the main.py file that will be a reflection demonstration on the class \emph{reflect} :
 \lstinputlisting[language=Python]{code/demo/main.py}
 
 This is the output printed by main.py :
 \lstinputlisting[language=Bash]{code/demo/output.sh}
 Note that each line of this last file corresponds to the red comment number (\textcolor{red}{\#X}) in main.py.\\ 
-In the first print (\textcolor{red}{\#1}), we use .\_\_class\_\_ that refers to the class to which a class instance belongs. In this case the program asks to the variable ref that is an instance of reflect (in the file Reflect.py) to print its own class.\\
-In the second print (\textcolor{red}{\#2}), we use .\_\_dict\_\_ that is a descriptor object that returns the internal dictionary of attributes for a specific instance. In this case the program asks to the variable ref that is an instance of reflect (in the file Reflect.py) to print its internal dictionary of attributes.\\
-In the third print (\textcolor{red}{\#3}), .\_\_doc\_\_ is the string of the class documentation. 
-In the fourth print (\textcolor{red}{\#4}), .\_\_sizeof\_\_ returns the size of an object in bytes.
 
-In the fifth print (\textcolor{red}{\#5}), we use .\_\_getattribute\_\_('name') 
+The four first prints are applied on an instance $i$ of the class reflect from the file Reflect.py.\\
+In the first print (\textcolor{red}{\#1}), we use .\_\_class\_\_ that refers to the class to which a class instance belongs. In this case the program asks to the instance $i$ to print its own class.\\
+In the second print (\textcolor{red}{\#2}), .\_\_dict\_\_ is a descriptor object that returns the internal dictionary of attributes for a specific instance. In this case the program asks to the instance $i$ to print its internal dictionary of attributes.\\
+In the third print (\textcolor{red}{\#3}), .\_\_doc\_\_ is the string of the class documentation. The class documentation of the file Reflect.py is the red comment line between the ''' symbols. This print straightforwardly asks $i$ to print a part of the file from the class which it is an instance.\\ 
+In the fourth print (\textcolor{red}{\#4}), .\_\_sizeof\_\_ returns the size of an object in bytes. The instance $i$ prints its own size in bytes.\\
 
+The fifth and sixth prints use accessors and mutators on the internal dictionary of attributes $d$ of the instance $i$.
+In the fifth print (\textcolor{red}{\#5}), we use .\_\_getattribute\_\_('firstname') that will get the attribute value of the attribute called "firstname" in $d$. Thus, it prints Romain.
+Before the sixth print (\textcolor{red}{\#6}), we modify the attribute values of the attributes "firstname" and "surname" to Antoine and Marchal respectively. If we now print the firstname of the instance $i$ (\textcolor{red}{\#6}), Antoine will be printed instead of Romain.\\
 
+With \textcolor{red}{\#7}, we call the method \emph{welcome()} that simply prints the string "Welcome my friend!". Then, we link an attribute called \emph{hello} of the instance $i$ to that method \emph{welcome()}. Python use dynamic typing. This attribute will be defined as a method because the behaviour of \emph{welcome()} is the one of a method. This implies that calling \emph{i.hello()} (\textcolor{red}{\#8}) will actually call \emph{welcome()} and thus just as in \textcolor{red}{\#7} print the string "Welcome my friend!".\\
+
+With \textcolor{red}{\#9}, we call the method message() that has been created at the creation of the instance $i$. The behaviour of this method on an instance $j$ is to print the string \emph{("My firstname is" + firstname + "and my surname is" + surname)} where the variables firstname and surname are $j$.\_\_getattribute\_\_(’firstname’) and $j$.\_\_getattribute\_\_(’surname’) respectively. Then, similarly to what we did before \textcolor{red}{\#8} we linked this attribute to the method welcome. This implies that calling \emph{i.message()} again (\textcolor{red}{\#10}) will actually call \emph{welcome()} and thus just as in \textcolor{red}{\#8} print the string "Welcome my friend!".\\
+
+These four previous prints showed that it is possible and easy in Python to define are redefine dynamically typed attributes of an instance. NEED TO ADD WHY IT IS REFLEXION.
 
 •	Does there exist a “killer-app” for this language that has been implemented with reflection?\\
 
