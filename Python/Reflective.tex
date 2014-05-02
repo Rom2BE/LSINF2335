@@ -48,6 +48,43 @@ Python MOP is about callables such as functions and instances with \_\_call\_\_ 
 
 % Q5: done within the other answers
 
+\subsection{Applications of reflection}
+•	What are the typical applications that reflection could be used for in this language?\\
+
+We need to know all details of methods associated with a class in order to enumerate these methods and print them. Several programming languages associate this structure with the type. In that case, the structure is defined by type and is already decided before run-time. Actually it is done most of the time during the compilation processus. For example, when you write a class in C++, you have to define all the details of this class. However, at run-time, the program itself is not aware of the structure of the class because it does not have the ability the examine its inner structure while the program is running.\\
+One could say it is useless to examine this structure at run-time because he could have done it before. When writing it or even during an eventual compilation processus. But beside that, reflection is not only about the fact of examining its own structure. It is also the ability to modify and maintain its inner structure at run-time.\\
+A program made in a programming language that does not support reflection is not able to call twice the same method in order to produce two different results depending on the inner structure of the program. In the opposite corner, a reflective programming language can do it. And some of them, such as Python, can achieve it easily due to their simple syntax. \cite{assembleforce}
+\newline
+
+
+•	Can you give a working code example of such a typical problem that requires a reflective solution?\\
+
+This is the Reflect.py file that will define the class \emph{reflect}:
+\lstinputlisting[language=Python]{code/demo/Reflect.py}
+
+This is the main.py file that will be a reflection demonstration on the class \emph{reflect} :
+\lstinputlisting[language=Python]{code/demo/main.py}
+
+This is the output printed by main.py:
+\lstinputlisting[language=Bash]{code/demo/output.sh}
+Note that each line of this last file corresponds to the red comment number (\textcolor{red}{\#X}) in main.py.\\ 
+
+The four first prints are applied on an instance $i$ of the class reflect from the file Reflect.py.\\
+In the first print (\textcolor{red}{\#1}), we use .\_\_class\_\_ that refers to the class to which a class instance belongs. In this case the program asks to the instance $i$ to print its own class.\\
+In the second print (\textcolor{red}{\#2}), .\_\_dict\_\_ is a descriptor object that returns the internal dictionary of attributes for a specific instance. In this case the program asks to the instance $i$ to print its internal dictionary of attributes.\\
+In the third print (\textcolor{red}{\#3}), .\_\_doc\_\_ is the string of the class documentation. The class documentation of the file Reflect.py is the red comment line between the ''' symbols. This print straightforwardly asks $i$ to print a part of the file from the class which it is an instance.\\ 
+In the fourth print (\textcolor{red}{\#4}), .\_\_sizeof\_\_ returns the size of an object in bytes. The instance $i$ prints its own size in bytes.\\
+
+The fifth and sixth prints use accessors and mutators on the internal dictionary of attributes $d$ of the instance $i$.
+In the fifth print (\textcolor{red}{\#5}), we use .\_\_getattribute\_\_('firstname') that will get the attribute value of the attribute called "firstname" in $d$. Thus, it prints Romain.
+Before the sixth print (\textcolor{red}{\#6}), we modify the attribute values of the attributes "firstname" and "surname" to Antoine and Marchal respectively. If we now print the firstname of the instance $i$ (\textcolor{red}{\#6}), Antoine will be printed instead of Romain.\\
+
+With \textcolor{red}{\#7}, we call the method \emph{welcome()} that simply prints the string "Welcome my friend!". Then, we link an attribute called \emph{hello} of the instance $i$ to that method \emph{welcome()}. Python use dynamic typing. This attribute will be defined as a method because the behaviour of \emph{welcome()} is the one of a method. This implies that calling \emph{i.hello()} (\textcolor{red}{\#8}) will actually call \emph{welcome()} and thus just as in \textcolor{red}{\#7} print the string "Welcome my friend!".\\
+
+With \textcolor{red}{\#9}, we call the method message() that has been created at the creation of the instance $i$. The behaviour of this method on an instance $j$ is to print the string \emph{("My firstname is" + firstname + "and my surname is" + surname)} where the variables firstname and surname are $j$.\_\_getattribute\_\_(’firstname’) and $j$.\_\_getattribute\_\_(’surname’) respectively. Then, similarly to what we did before \textcolor{red}{\#8} we linked this attribute to the method welcome. This implies that calling \emph{i.message()} again (\textcolor{red}{\#10}) will actually call \emph{welcome()} and thus just as in \textcolor{red}{\#8} print the string "Welcome my friend!".\\
+
+These four previous prints showed that it is possible and easy in Python to define are redefine dynamically typed attributes of an instance. As explained in \ref{reflection} this is called intercession and thus is a  simple and clear example of reflection in Python.\\
+
 \subsubsection{Write a Quine}
 To write a quine that makes use of reflection, we will divide our program in two parts:
 \begin{enumerate}
@@ -69,44 +106,18 @@ It is reflective because:
     \item The string is also divided in two parts: string \& core. Printed, it will produce a result that equals the source code. It is just like if the program was able to print itself. 
 \end{enumerate}
 
-\subsection{Applications of reflection}
-•	What are the typical applications that reflection could be used for in this language?\\
+\subsubsection{Python's killer-app : Youtube}
 
-We need to know all details of methods associated with a class in order to enumerate these methods and print them. Several programming languages associate this structure with the type. In that case, the structure is defined by type and is already decided before run-time. Actually it is done most of the time during the compilation processus. For example, when you write a class in C++, you have to define all the details of this class. However, at run-time, the program itself is not aware of the structure of the class because it does not have the ability the examine its inner structure while the program is running.\\
-One could say it is useless to examine this structure at run-time because he could have done it before. When writing it or even during an eventual compilation processus. But beside that, reflection is not only about the fact of examining its own structure. It is also the ability to modify and maintain its inner structure at run-time.\\
-A program made in a programming language that does not support reflection is not able to call twice the same method in order to produce two different results depending on the inner structure of the program. In the opposite corner, a reflective programming language can do it. And some of them, such as Python, can achieve it easily due to their simple syntax. \cite{assembleforce}
-\newline
+The creator of Python, Guido van Rossum now works for Google. Python is used by Google for its search engine, Youtube, and other smaller Google products.\\
 
+In 2006, Guido van Rossum said via the python developers mail list:
+\emph{"And I just found out (after everyone else probably :-) that YouTube is almost entirely written in Python. (And now I can rub shoulders with the developers since they're all Googlers now... :-)"}\\
 
-•	Can you give a working code example of such a typical problem that requires a reflective solution?\\
+We do not have the code of these different Google products BUT if we look for this on the internet (using Google search engine of course), and if we draw aside video on Youtube about snakes, we can find the Python API in the Google developers website. For example, we can see that they use metaclasses, they even have modules called reflection (for example in the package protobuf). When loading a new message, the GeneratedProtocolMessageType metaclass uses intercession on the specified descriptors in order to create all the Python methods developers need to work with each message type and adds them to the relevant classes. \cite{google_reflection_references, google_reflection_tutorial}
 
-This is the Reflect.py file that will define the class \emph{reflect} :
-\lstinputlisting[language=Python]{code/demo/Reflect.py}
+This is an example from the google tutorial showing how to use reflection:
+\lstinputlisting[language=Python]{code/demo/Google.py}
 
-This is the main.py file that will be a reflection demonstration on the class \emph{reflect} :
-\lstinputlisting[language=Python]{code/demo/main.py}
-
-This is the output printed by main.py :
-\lstinputlisting[language=Bash]{code/demo/output.sh}
-Note that each line of this last file corresponds to the red comment number (\textcolor{red}{\#X}) in main.py.\\ 
-
-The four first prints are applied on an instance $i$ of the class reflect from the file Reflect.py.\\
-In the first print (\textcolor{red}{\#1}), we use .\_\_class\_\_ that refers to the class to which a class instance belongs. In this case the program asks to the instance $i$ to print its own class.\\
-In the second print (\textcolor{red}{\#2}), .\_\_dict\_\_ is a descriptor object that returns the internal dictionary of attributes for a specific instance. In this case the program asks to the instance $i$ to print its internal dictionary of attributes.\\
-In the third print (\textcolor{red}{\#3}), .\_\_doc\_\_ is the string of the class documentation. The class documentation of the file Reflect.py is the red comment line between the ''' symbols. This print straightforwardly asks $i$ to print a part of the file from the class which it is an instance.\\ 
-In the fourth print (\textcolor{red}{\#4}), .\_\_sizeof\_\_ returns the size of an object in bytes. The instance $i$ prints its own size in bytes.\\
-
-The fifth and sixth prints use accessors and mutators on the internal dictionary of attributes $d$ of the instance $i$.
-In the fifth print (\textcolor{red}{\#5}), we use .\_\_getattribute\_\_('firstname') that will get the attribute value of the attribute called "firstname" in $d$. Thus, it prints Romain.
-Before the sixth print (\textcolor{red}{\#6}), we modify the attribute values of the attributes "firstname" and "surname" to Antoine and Marchal respectively. If we now print the firstname of the instance $i$ (\textcolor{red}{\#6}), Antoine will be printed instead of Romain.\\
-
-With \textcolor{red}{\#7}, we call the method \emph{welcome()} that simply prints the string "Welcome my friend!". Then, we link an attribute called \emph{hello} of the instance $i$ to that method \emph{welcome()}. Python use dynamic typing. This attribute will be defined as a method because the behaviour of \emph{welcome()} is the one of a method. This implies that calling \emph{i.hello()} (\textcolor{red}{\#8}) will actually call \emph{welcome()} and thus just as in \textcolor{red}{\#7} print the string "Welcome my friend!".\\
-
-With \textcolor{red}{\#9}, we call the method message() that has been created at the creation of the instance $i$. The behaviour of this method on an instance $j$ is to print the string \emph{("My firstname is" + firstname + "and my surname is" + surname)} where the variables firstname and surname are $j$.\_\_getattribute\_\_(’firstname’) and $j$.\_\_getattribute\_\_(’surname’) respectively. Then, similarly to what we did before \textcolor{red}{\#8} we linked this attribute to the method welcome. This implies that calling \emph{i.message()} again (\textcolor{red}{\#10}) will actually call \emph{welcome()} and thus just as in \textcolor{red}{\#8} print the string "Welcome my friend!".\\
-
-These four previous prints showed that it is possible and easy in Python to define are redefine dynamically typed attributes of an instance. As explained in \ref{reflection} this is called intercession and thus is a  simple and clear example of reflection in Python.\\
-
-•	Does there exist a “killer-app” for this language that has been implemented with reflection?\\
 
 \subsection{Comparison with other languages}
 •	How does this language compare to Smalltalk, Java or Ruby from the point of view of the reflective features it supports, the kinds of reflection it offers, or its MOP?\\
