@@ -134,7 +134,10 @@ It is reflective because:
     \item The string is also divided in two parts: string \& core. Printed, it will produce a result that equals the source code. It is just like if the program was able to print itself. 
 \end{enumerate}
 
-\subsubsection{Python's killer-app : YouTube}
+\subsubsection{Python's killer-app: Zope}
+Zope has been recognized as Python's killer-app. It is a web application server written in Python that contributed to put it in the spotlight.
+
+\subsubsection{Famous service written in Python: YouTube}
 The creator of Python, Guido van Rossum works for Google. Python is used by Google for its search engine, YouTube and other smaller Google products.\\
 
 In 2006, Guido van Rossum said via the python developers mail list:
@@ -165,3 +168,15 @@ JE FAIS DES COPIE-COLLE DE PARTIES IMPORTANTES.\\
 "Python's reflection is quite good. The list of all living objects, however, does not exist."\\
 
 \subsubsection{Python versus Java}
+Imagine that we want to write a function that take any object that has a method with this signature:
+\lstinputlisting[language=Python]{code/versusJP_signature}
+
+In Java, we should use the Reflection API \cite{python_more_fun_java}. First, we have to check if the object has this method. Second, we have to call the method with 2 strings. Here is the code we should write:
+\lstinputlisting[language=Java]{code/versusJP_java.java}
+
+In Python, the code should be:
+\lstinputlisting[language=Python]{code/versusJP_python.py}
+
+As you can see, the code is clearer and easier to produce in Python than in Java.
+
+%Java provides an API for reflection which can be used to examine or modify the runtime behavior of applications running in the JVM.
