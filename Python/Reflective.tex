@@ -9,16 +9,19 @@ We can easily use reflection in Python with built-in functions. Here are the mai
     \item id(object): Return the "identity" of an object. This is an integer (or long integer) which is guaranteed to be unique and constant for this object during its lifetime.
     \item isinstance(object, classinfo): Return true if the object argument is an instance of the classinfo argument, or of a (direct, indirect or virtual) subclass thereof.
     \item callable(object): Return True if the object argument appears callable, False if not.
-    \item getattr(object, name[, default]): Return the value of the named attribute of object. name must be a string.
+    \item getattr(object, name[, default]): Return the value of the named attribute of object.
 \end{itemize}
+
+Here are some examples of such functions on the integer 42:
+\lstinputlisting[language=Python]{code/dir_cut.py}
 
 It is also possible to use reflection with modules:
 \begin{itemize}
     \item The \textit{inspect} module provides several useful functions to help get information about live objects \cite{python_doc_inspect}. \item The \textit{sys} module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter \cite{python_doc_sys}.
 \end{itemize}
 
-Here are some examples of such functions on the integer 42:
-\lstinputlisting[language=Python]{code/dir_cut.py}
+Here is an example on the \textit{sys} module:
+\lstinputlisting[language=Python]{code/sys_module}
 
 We can also create metaclasses: in Python, a metaclass can be a class, function or any object that supports calling an interface \cite{pythoncentral_metaclasses}. The metaclass by default is the "type" object.
 
@@ -68,7 +71,7 @@ Python does both. It has a feature to add fields and methods to objects and clas
 
 % Q3
 In Python, it is possible to change the class of an object at runtime \cite{dynamic_lang_study}.
-Python MOP is about callables such as functions and instances with \_\_call\_\_ method \cite{Russel_MOP}.
+%Python MOP is about callables such as functions and instances with \_\_call\_\_ method \cite{Russel_MOP}.
 
 % Q4
 We found some limitations with reflection in Python compared to other languages such as Ruby (see \autoref{ruby_vs_python}).
