@@ -49,17 +49,17 @@ Python MOP is about callables such as functions and instances with \_\_call\_\_ 
 % Q5: done within the other answers
 
 \subsection{Applications of reflection}
-•	What are the typical applications that reflection could be used for in this language?\\
 
-We need to know all details of methods associated with a class in order to enumerate these methods and print them. Several programming languages associate this structure with the type. In that case, the structure is defined by type and is already decided before run-time. Actually it is done most of the time during the compilation processus. For example, when you write a class in C++, you have to define all the details of this class. However, at run-time, the program itself is not aware of the structure of the class because it does not have the ability the examine its inner structure while the program is running.\\
-One could say it is useless to examine this structure at run-time because he could have done it before. When writing it or even during an eventual compilation processus. But beside that, reflection is not only about the fact of examining its own structure. It is also the ability to modify and maintain its inner structure at run-time.\\
-A program made in a programming language that does not support reflection is not able to call twice the same method in order to produce two different results depending on the inner structure of the program. In the opposite corner, a reflective programming language can do it. And some of them, such as Python, can achieve it easily due to their simple syntax. \cite{assembleforce}
-\newline
+Python is a perfect language to easily build various type of applications. 
+Reflection seems to be omnipresent in this language. 
+It is completely integrated in the way of programming in Python.\\
+
+Most of the time, we need to know all details of methods associated with a class in order to enumerate these methods and print them. Several programming languages associate this structure with the type. In that case, the structure is defined by type and is already decided before run-time. Actually it is done most of the time during the compilation processus. For example, when you write a class in C++, you have to define all the details of this class. However, at run-time, the program itself is not aware of the structure of the class because it does not have the ability the examine its inner structure while the program is running.\\
+One could say it is useless to examine this structure at run-time because it could have be done before. When writing it or even during an eventual compilation processus. But beside that, reflection is not only about the fact of examining its own structure. It is also the ability to modify and maintain its inner structure at run-time.\\
+A program made in a programming language that does not support reflection is not able to call twice the same method in order to produce two different results depending on the inner structure of the program. In the opposite corner, a reflective programming language can do it. And some of them, such as Python, can achieve it easily due to their simple syntax. \cite{assembleforce} \\
 
 
-•	Can you give a working code example of such a typical problem that requires a reflective solution?\\
-
-This is the Reflect.py file that will define the class \emph{reflect}:
+This is Reflect.py defining the class \emph{reflect} that we will use to demonstrate reflective abilities of Python:
 \lstinputlisting[language=Python]{code/demo/Reflect.py}
 
 This is the main.py file that will be a reflection demonstration on the class \emph{reflect} :
