@@ -2,14 +2,25 @@
 \subsection{Reflective features}
 \label{reflection}
 % Q1
-We can easily use reflection in Python with the following functions: type(), id(), isinstance(), callable(), dir(), getattr(), etc. \cite{python_doc_functions}.
-The \textit{inspect} module can also be used to get information about objects \cite{python_doc_inspect}. Another module is the \textit{sys} module which allows us to query about the environment \cite{zetcode_introspection}.
-The metaclass by default is the "type" object.
+We can easily use reflection in Python with built-in functions. Here are the main functions \cite{python_doc_functions}:
+\begin{itemize}
+    \item dir([object]): Without arguments, return the list of names in the current local scope. With an argument, attempt to return a list of valid attributes for that object.
+    \item type(object): With one argument, return the type of an object. The return value is a type object.
+    \item id(object): Return the "identity" of an object. This is an integer (or long integer) which is guaranteed to be unique and constant for this object during its lifetime.
+    \item isinstance(object, classinfo): Return true if the object argument is an instance of the classinfo argument, or of a (direct, indirect or virtual) subclass thereof.
+    \item callable(object): Return True if the object argument appears callable, False if not.
+    \item getattr(object, name[, default]): Return the value of the named attribute of object. name must be a string.
+\end{itemize}
+
+It is also to use reflection with modules:
+\begin{itemize}
+    \item The \textit{inspect} module provides several useful functions to help get information about live objects \cite{python_doc_inspect}. \item The \textit{sys} module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter \cite{python_doc_sys}.
+\end{itemize}
 
 Here are some examples of such functions on the integer 42:
 \lstinputlisting[language=Python]{code/dir_cut.py}
 
-We can also create metaclasses: in Python, a metaclass can be a class, function or any object that supports calling an interface \cite{pythoncentral_metaclasses}.
+We can also create metaclasses: in Python, a metaclass can be a class, function or any object that supports calling an interface \cite{pythoncentral_metaclasses}. The metaclass by default is the "type" object.
 
 The syntax to use metaclasses has been modified from Python 2 to Python 3 \cite{mikewatkins_metaclasses}. The syntax of the metaclass' creation is still the same \cite{python_doc_datamodel}:
 \lstinputlisting[language=Python]{code/metaclass.py}
@@ -56,7 +67,7 @@ We can also classify reflection according to what can be reflected: structural r
 Python does both. It has a feature to add fields and methods to objects and classes. It can also modify the behavior of a method \cite{mendez2011computational}.
 
 % Q3
-In Python, it is possible to change the class of an object at runtime \cite{dynamic_lang_study}. % (related to become of Smalltalk).
+In Python, it is possible to change the class of an object at runtime \cite{dynamic_lang_study}.
 Python MOP is about callables such as functions and instances with \_\_call\_\_ method \cite{Russel_MOP}.
 
 % Q4
