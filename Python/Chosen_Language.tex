@@ -4,35 +4,33 @@ We have chosen Python which is a programming language quite easy to learn and us
 \newline
 
 % Q2
-Python is a multi-paradigms language. It supports the following programming paradigms: object-oriented, reflective (and by extension, meta-programming), procedural (and by extension, imperative) and functional programming.
-
-%object-oriented \cite{martelli2006python} \cite{functional_doc}, functional \cite{functional_doc} \cite{devtome}, meta-programming \cite{mihai} and procedural \cite{martelli2006python} \cite{functional_doc}.
+Python is a multi-paradigms language. It supports the following programming paradigms: object-oriented, procedural (and by extension, imperative), functional programming and last but not least, reflective (and by extension, meta-programming) \cite{martelli2006python} \cite{python_doc_functional}.
 
 % Q3
-It appeared in February 1991 and takes some aspects of its philosophy from ABC \cite{python_why}. Its syntax is inherited in particular from ABC and C languages \cite{wikipediaEN_history_python}. Python's syntax allows us to quickly create things with smaller portions of code (e.g. we don't need to write long lines such as "\textit{public static void main (String args[])}" in Java).
+It appeared in February 1991 and takes some aspects of its philosophy from ABC \cite{python_doc_why}. Its syntax is inherited in particular from ABC and C languages \cite{wikipediaEN_history_python}. Python's syntax allows us to quickly create things with smaller portions of code (e.g. we don't need to write long lines such as "\textit{public static void main (String args[])}" in Java).
 
-Python's code has been designed to be easily readable \cite{ZenPython} and is not compiled as in Java or C, it is interpreted.
+Python's code has been designed to be easily readable such as stated in \textit{"The Zen of Python"} \cite{ZenPython} and is interpreted. As in Java or C, the code can also be compiled.
 
 At the opposite of other programming languages, the indentation is really important because the success of the code's interpretation depends on it. Both spaces and tabulations are accepted for the indentation but mixing them can sometimes result in bugs. As many tools don't distinguish tabulations and spaces, it can be hard to debug.
 
-Python uses late binding \cite{python_pep0289} and duck typing is heavily used \cite{wikipediaEN_duck_typing_python}.
-
 As Python is a dynamically typed language, the type is carried by the values, not by the variables. These ones hold references to objects and these references are passed to functions \cite{wikipediaEN_python_syntax_semantics}.
+
+Python uses late binding \cite{python_pep0289} and duck typing is heavily used \cite{wikipediaEN_duck_typing_python}.
 
 Everything is an object in Python, even classes. Furthermore, classes have a class (metaclass) \cite{python_datamodel}.
 
-Python has other interesting characteristics but we wanted to focus on the ones that seemed the most important.
+Python has other interesting characteristics but we wanted to focus on the ones that seemed the most important to us.
 \newline
 
 % Q4
-Here is an exemple of Fibonacci:
-\lstinputlisting[language=Python]{code/example.py}
+Here is an exemple of working code in Python. It is the implementation of the Fibonacci sequence:
+\lstinputlisting[language=Python]{code/fibonacci.py}
 
 We can run this program by executing the following command:
-\lstinputlisting[language=Bash]{code/example_run.sh}
+\lstinputlisting[language=Bash]{code/fibonacci_run.sh}
 
 And this is the output:
-\lstinputlisting[language=Bash]{code/example_output.sh}
+\lstinputlisting[language=Bash]{code/fibonacci_output.sh}
 
 % Q5
 This language can be used in various kind of application domains. Here are some examples \cite{python_applications}:
